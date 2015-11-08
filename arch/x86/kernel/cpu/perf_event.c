@@ -965,6 +965,7 @@ int x86_perf_event_set_period(struct perf_event *event)
 	/* start: add by penhoi */
 	if ((hwc->config & 0xFFFF) == 0x20cc) {
 		ret = 1;
+		left = period;
 		goto x20cc;
 	}
 	/* end */
